@@ -1,86 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кофе</title>
-    <link rel = "icon" href="assets/IC_coffee.png" type="image/x-icon">
+    <link rel="icon" href="assets/IC_coffee.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/LOGO.png"> 
+    <header class="header">
+        <div class="header__logo">
+            <img src="assets/LOGO.png" alt="logo">
         </div>
-        <h1>Твой персональный кофе</h1>
+        <h1 class="header__title">Твой персональный кофе</h1>
+        <div>
+            <img src="assets/Баннер.png">
+        </div>
         <nav>
             <h2>Главная</h2>
             <ul>
                 <li>
-                    <a href="section-features">Кофе</a>
+                    <a href="#section-features">Кофе</a>
                 </li>
                 <li>
-                    <a href="section-coffee">Фильтр кофе</a>
+                    <a href="#section-coffee">Фильтр кофе</a>
                 </li>
                 <li>
-                    <a href="section-combo">Комбо</a>
+                    <a href="#section-combo">Комбо</a>
                 </li>
                 <li>
-                    <a href="section-gifts">Подарочные наборы</a>
+                    <a href="#section-gifts">Подарочные наборы</a>
                 </li>
                 <li>
                     <a href="">Контакты</a>
                 </li>
             </ul>
         </nav>
-        <div>
-            <img src="assets/Баннер.png">
-        </div>
+
     </header>
     <main>
-        <section id="section-features">
-            <h3>Твой персональный кофе</h3>
-            <h2>Кофе строит твою базу</h2>
-            <div>
-                <ul>
+        <section class="section" id="section-features" class="link">
+            <h3 class="title">Твой персональный кофе</h3>
+            <h2 class="title">Кофе строит твою базу</h2>
+            <div class="container">
+                <ul class="card">
                     <li>
-                        <img src="assets/ic.png">
-                        <div>
-                            <p>Происхождение</p>
+                        <img class="section__card__img" src="assets/ic.png">
+                        <div class="text__container">
+                            <p class="title">Происхождение</p>
                             <p>Кофейные зерна арабика и робуста имеют качество международного стандарта.</p>
                         </div>
                     </li>
                     <li>
-                        <img src="assets/IC (1).png">
-                        <div>
-                            <p>Качество</p>
-                            <p>Каждая кофейное зерно представляет собой высококонцентрированный процесс для кофейных мастеров.</p>
+                        <img class="section__card__img" src="assets/IC (1).png">
+                        <div class="text__container">
+                            <p class="title">Качество</p>
+                            <p>Каждая кофейное зерно представляет собой высококонцентрированный процесс для кофейных
+                                мастеров.</p>
                         </div>
                     </li>
                     <li>
-                        <img src="assets/IC (2).png">
-                        <div>
-                            <p>Кофейные зёрна</p>
+                        <img class="section__card__img" src="assets/IC (2).png">
+                        <div class="text__container">
+                            <p class="title">Кофейные зёрна</p>
                             <p>70% качества кофейных чашек связано с происхождением и качеством кофейных зёрен.</p>
                         </div>
                     </li>
                     <li>
-                        <img src="assets/IC (3).png">
-                        <div>
-                            <p>Раздачи</p>
+                        <img class="section__card__img" src="assets/IC (3).png">
+                        <div class="text__container">
+                            <p class="title">Раздачи</p>
                             <p>Кофейные зерна линяют посредством тщательного и тщательного обжарки.</p>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section id="section-coffee">
-            <h3>Выбери свой любимый</h3>
-            <h2>Стандартный вкус</h2>
-            <div>
-                <ul>
-                    <li>
-                        <img src="assets/IMAGE.png">
+        <section class="section" id="section-coffee">
+            <h3 class="title">Выбери свой любимый</h3>
+            <h2 class="title">Стандартный вкус</h2>
+            <div class="container">
+                <ul class="card">
+                    <li class="list">
+                        <div class="">
+                            <img src="assets/IMAGE.png">
+                        </div>
                         <div>
                             <p>99000$</p>
                             <p>РЕВО утро</p>
@@ -128,7 +134,7 @@
                 </ul>
             </div>
         </section>
-        <section id="section-gifts">
+        <section class="section" id="section-gifts">
             <h3>Лучший подарок для лучшего друга</h3>
             <h2>Подарочные наборы</h2>
             <div>
@@ -139,7 +145,9 @@
                             <div>
                                 <p>285.000$</p>
                                 <p>Набор подарков "Вьетнамский фильтрованный кофе"</p>
-                                <p>Отличный подарок ценителям кофе. Кофейные зерна тщательно отбираются и обжариваются компанией Revo технологии и секреты, полученные от известных ремесленников, а также любовь и страсть рабочих кофе... создайте чашки чистого кофе специально для вас.</p>
+                                <p>Отличный подарок ценителям кофе. Кофейные зерна тщательно отбираются и обжариваются
+                                    компанией Revo технологии и секреты, полученные от известных ремесленников, а также
+                                    любовь и страсть рабочих кофе... создайте чашки чистого кофе специально для вас.</p>
                                 <ul>
                                     <li>
                                         <img src="assets/IC_coffee.png">
@@ -173,11 +181,11 @@
                                 <button> 3 </button>
                             </li>
                         </ul>
-                    </div>    
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="section-combo">
+        <section class="section" id="section-combo">
             <h3>Твой персональный кофе</h3>
             <h2>Комбо</h2>
             <div>
@@ -185,13 +193,14 @@
                     <li>
                         <img src="assets/image (6).png">
                         <div>
-                            <div>
+                            <div class="class1">
                                 <div>
                                     <p>147.000$</p>
                                     <p><s>155.000$</s></p>
                                 </div>
                                 <p>Тёмное РЕВО комбо</p>
-                                <p>Содержание кофеина в Revo Dam Da достаточно сильное, чтобы не дать вам уснуть на работе...</p>
+                                <p>Содержание кофеина в Revo Dam Da достаточно сильное, чтобы не дать вам уснуть на
+                                    работе...</p>
                             </div>
                             <button>Купить сейчас</button>
                             <button>Детали</button>
@@ -231,8 +240,9 @@
             </div>
         </section>
     </main>
-<footer>
-    <p class="footer-sign">© Revo Coffee Vietnam - 2025</p>
-</footer>
+    <footer>
+        <p class="footer-sign">© Revo Coffee Vietnam - 2025</p>
+    </footer>
 </body>
+
 </html>

@@ -17,8 +17,11 @@
 }
 
 .giftset__title {
-    font-size: 44px;
+    display: grid;
+    justify-content: center;
+    font-size: 30px;
     font-weight: 600;
+    text-align: center;
     color: #2d415b;
     margin-bottom: 60px;
 }

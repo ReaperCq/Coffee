@@ -1,0 +1,110 @@
+/* GRID для списка */
+.combo {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 390px);
+    column-gap: 3em;
+    row-gap: 1em;
+    justify-content: center;
+}
+
+/* карточка горизонтальная */
+.combo__item {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    align-items: center;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    max-width: 390px;
+    padding: 1em;
+}
+
+
+.combo__image {
+    flex: 0 0 210px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* текст справа */
+.combo__text-container {
+    flex: 1;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+/* цена */
+.combo__card__price {
+    display: flex;
+    font-size: 20px;
+    font-weight: 800;
+    color: #c7a17a;
+    margin: 0;
+    gap: 15px;
+}
+
+.combo__card__sale {
+    opacity: 70%;
+}
+
+/* название */
+.combo__card__title {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0;
+    color: #000;
+}
+
+/* описание */
+.combo_card__description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+}
+
+/* buttons wrapper */
+.combo__card__buttons {
+    display: flex;
+    gap: 18px;
+}
+
+/* кнопка «Купить» */
+.combo__card__button {
+    background: #c7a17a;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 22px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    flex: 1;
+}
+
+.combo__card__button:hover {
+    background: #f9f5e8;
+    color: #415167;
+}
+
+/* кнопка «Подробнее»
+.combo__card__details {
+    color: #415167;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.combo__card__details:hover {
+    text-decoration: underline;
+}
+*/

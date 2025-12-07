@@ -1,0 +1,23 @@
+.features {
+  /* Стили для ul */
+    display: grid;
+    grid-template-columns: repeat(4, 226px);
+    gap: 50px;
+    margin-top: 72px;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+
+.features__image {
+  /* Стили для картинки */
+  margin-bottom: 42px;
+}
+
+.features__text-container {
+  /* Стили для контейнера с текстом */
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}

@@ -1,0 +1,99 @@
+/* GRID для списка */
+.coffee {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 20px;
+  list-style: none;
+  margin: 72px 0;
+}
+
+/* карточка горизонтальная */
+.coffee__item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* картинка слева */
+.coffee__image {
+  flex: 0 0 210px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* текст справа */
+.coffee__text-container {
+  flex: 1;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+/* цена */
+.card__price {
+  font-size: 20px;
+  font-weight: 800;
+  color: #c7a17a;
+  margin: 0;
+}
+
+/* название */
+.card__title {
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0;
+  color: #000;
+}
+
+/* описание */
+.card__description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+/* buttons wrapper */
+.card__buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* кнопка «Купить» */
+.card__button {
+  background: #c7a17a;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 22px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.card__button:hover {
+  background: #f9f5e8;
+  color: #415167;
+}
+
+/* кнопка «Подробнее» */
+.card__details {
+  color: #415167;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card__details:hover {
+  text-decoration: underline;
+}

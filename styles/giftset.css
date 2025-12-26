@@ -1,11 +1,9 @@
-/* section wrapper */
 .giftset {
     padding: 100px 0;
     background: #f4f6fa;
     text-align: center;
 }
 
-/* header text */
 .giftset__caption {
     font-size: 14px;
     font-weight: 200;
@@ -26,7 +24,6 @@
     margin-bottom: 60px;
 }
 
-/* card container */
 .giftset__card {
     width: 100%;
     max-width: 1040px;
@@ -41,7 +38,6 @@
     padding-left: 20px;
 }
 
-/* image block */
 .giftset__image {
     display: block;
     width: 100%;
@@ -49,10 +45,12 @@
     object-fit: contain;
 }
 
-/* content */
 .giftset__content {
     padding: 50px 60px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .giftset__price {
@@ -77,11 +75,11 @@
     margin-bottom: 30px;
 }
 
-/* meta */
 .giftset__meta {
     display: flex;
     gap: 40px;
     margin-bottom: 40px;
+    list-style: none;
 }
 
 .giftset__meta li {
@@ -109,7 +107,6 @@
     display: block;
 }
 
-/* buttons */
 .giftset__buttons {
     display: flex;
     align-items: center;
@@ -140,7 +137,6 @@
     text-transform: uppercase;
 }
 
-/* side steps */
 .giftset__steps {
     display: flex;
     flex-direction: column;
@@ -161,4 +157,181 @@
     color: #2d415b;
     background: #fff;
     box-shadow: -8px 0 24px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Планшеты большие (до 1100px) */
+@media (max-width: 1100px) {
+    .giftset__card {
+        grid-template-columns: 350px 1fr 80px;
+        padding-left: 15px;
+    }
+
+    .giftset__content {
+        padding: 40px 40px;
+    }
+
+    .giftset__name {
+        font-size: 22px;
+    }
+
+    .giftset__desc {
+        font-size: 14px;
+    }
+}
+
+/* Планшеты (до 900px) */
+@media (max-width: 900px) {
+    .giftset {
+        padding: 60px 20px;
+    }
+
+    .giftset__title {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
+    .giftset__card {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 0;
+        max-width: 600px;
+    }
+
+    .giftset__image {
+        height: 300px;
+    }
+
+    .giftset__content {
+        padding: 30px 30px;
+    }
+
+    .giftset__meta {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .giftset__steps {
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .giftset__steps li {
+        padding: 15px 30px;
+    }
+
+    .giftset__steps li.active {
+        box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.05);
+    }
+}
+
+/* Планшеты малые (до 768px) */
+@media (max-width: 768px) {
+    .giftset {
+        padding: 40px 15px;
+    }
+
+    .giftset__title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .giftset__card {
+        border-radius: 16px;
+    }
+
+    .giftset__content {
+        padding: 25px 20px;
+    }
+
+    .giftset__price {
+        font-size: 18px;
+    }
+
+    .giftset__name {
+        font-size: 20px;
+    }
+
+    .giftset__desc {
+        font-size: 13px;
+    }
+
+    .giftset__buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .giftset__buy {
+        width: 100%;
+    }
+}
+
+/* Мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+    .giftset {
+        padding: 30px 10px;
+    }
+
+    .giftset__title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .giftset__image {
+        height: 250px;
+    }
+
+    .giftset__content {
+        padding: 20px 15px;
+    }
+
+    .giftset__price {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .giftset__name {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .giftset__desc {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .giftset__meta {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .giftset__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .giftset__meta-title {
+        font-size: 12px;
+    }
+
+    .giftset__meta-value {
+        font-size: 14px;
+    }
+
+    .giftset__steps {
+        padding: 15px 0;
+    }
+
+    .giftset__steps li {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .giftset__buy {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
 }

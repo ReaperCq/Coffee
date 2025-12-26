@@ -12,8 +12,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
-
 
 .section {
   padding: 86px 16px 126px;
@@ -22,6 +22,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1440px;
+  width: 100%;
 }
 
 .title {
@@ -32,4 +33,54 @@ body {
 .footer {
   display: flex;
   place-content: center;
+  padding: 20px;
+  background: #415167;
+  color: #fff;
+  font-size: 14px;
+}
+
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px 16px 80px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+/* Планшеты малые (до 768px) */
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 12px 60px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .footer {
+    padding: 15px;
+    font-size: 12px;
+  }
+}
+
+/* Мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+  .section {
+    padding: 30px 8px 40px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .footer {
+    padding: 12px;
+    font-size: 11px;
+    text-align: center;
+  }
 }

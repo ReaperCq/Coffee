@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кофе</title>
+    <meta name="description" content="Revo Coffee Vietnam - Твой персональный кофе высшего качества">
+    <title>Кофе - Revo Coffee Vietnam</title>
     <link rel="icon" href="assets/IC_coffee.png" type="image/x-icon">
     <link rel="stylesheet" href="./index.css">
 </head>
@@ -12,7 +13,7 @@
 <body>
     <header class="header">
         <div class="header__left">
-            <img class="header__logo" src="assets/LOGO.png" alt="logo">
+            <img class="header__logo" src="assets/LOGO.png" alt="Логотип Revo Coffee">
             <h1 class="header__title">
                 Твой<br>
                 <span class="header__title--background">персональный</span><br>
@@ -20,8 +21,8 @@
             </h1>
         </div>
         <div class="header__right">
-            <img class="header__image" src="assets/Баннер.png">
-            <nav class="header__nav">
+            <img class="header__image" src="assets/Баннер.png" alt="Кофейные зёрна Revo">
+            <nav class="header__nav" aria-label="Основная навигация">
                 <h2>Главная</h2>
                 <ul>
                     <li>
@@ -37,14 +38,15 @@
                         <a href="#section-gifts">Подарочные наборы</a>
                     </li>
                     <li>
-                        <a href="">Контакты</a>
+                        <a href="#footer">Контакты</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
-        <section class="section" id="section-features" class="link">
+        <section class="section" id="section-features">
             <div class="features__title">
                 <h3>Твой персональный кофе</h3>
                 <h2>Кофе строит твою базу</h2>
@@ -52,38 +54,46 @@
             <div class="container">
                 <ul class="features">
                     <li>
-                        <img class="features__image" src="assets/ic.png">
-                        <div class="features__text-container">
-                            <p class="title">Происхождение</p>
-                            <p>Кофейные зерна арабика и робуста имеют качество международного стандарта.</p>
-                        </div>
+                        <article>
+                            <img class="features__image" src="assets/ic.png" alt="Иконка происхождения">
+                            <div class="features__text-container">
+                                <h4 class="title">Происхождение</h4>
+                                <p>Кофейные зёрна арабика и робуста имеют качество международного стандарта.</p>
+                            </div>
+                        </article>
                     </li>
                     <li>
-                        <img class="features__image" src="assets/IC (1).png">
-                        <div class="features__text-container">
-                            <p class="title">Качество</p>
-                            <p>Каждая кофейное зерно представляет собой высококонцентрированный процесс для кофейных
-                                мастеров.</p>
-                        </div>
+                        <article>
+                            <img class="features__image" src="assets/IC (1).png" alt="Иконка качества">
+                            <div class="features__text-container">
+                                <h4 class="title">Качество</h4>
+                                <p>Каждая кофейная зерно представляет собой высококонцентрированный процесс для кофейных
+                                    мастеров.</p>
+                            </div>
+                        </article>
                     </li>
                     <li>
-                        <img class="features__image" src="assets/IC (2).png">
-                        <div class="features__text-container">
-                            <p class="title">Кофейные зёрна</p>
-                            <p>70% качества кофейных чашек связано с&nbsp;происхождением и&nbsp;качеством кофейных
-                                зёрен.</p>
-                        </div>
+                        <article>
+                            <img class="features__image" src="assets/IC (2).png" alt="Иконка кофейных зёрен">
+                            <div class="features__text-container">
+                                <h4 class="title">Кофейные зёрна</h4>
+                                <p>70% качества кофейных чашек связано с происхождением и качеством кофейных зёрен.</p>
+                            </div>
+                        </article>
                     </li>
                     <li>
-                        <img class="features__image" src="assets/IC (3).png">
-                        <div class="features__text-container">
-                            <p class="title">Раздачи</p>
-                            <p>Кофейные зерна линяют посредством тщательного и тщательного обжарки.</p>
-                        </div>
+                        <article>
+                            <img class="features__image" src="assets/IC (3).png" alt="Иконка раздачи">
+                            <div class="features__text-container">
+                                <h4 class="title">Раздачи</h4>
+                                <p>Кофейные зерна линют посредством тщательного и тщательного обжарки.</p>
+                            </div>
+                        </article>
                     </li>
                 </ul>
             </div>
         </section>
+
         <section class="section" id="section-coffee">
             <div class="coffee__title">
                 <h3>Выбери свой любимый</h3>
@@ -92,56 +102,68 @@
             <div class="container">
                 <ul class="coffee">
                     <li class="coffee__item">
-                        <img class="coffee__image" src="assets/IMAGE.png">
-                        <div class="coffee__text-container">
-                            <p class="card__price">99.000&nbsp;$</p>
-                            <p class="card__title">РЕВО утро</p>
-                            <p class="card__description">горький, сладкий, цветочный</p>
-                            <div>
-                                <button class="card__button">Купить сейчас</button>
-                                <button class="card__button">Детали</button>
+                        <article>
+                            <img class="coffee__image" src="assets/IMAGE.png" alt="РЕВО утро">
+                            <div class="coffee__text-container">
+                                <p class="card__price">99.000&nbsp;₽</p>
+                                <h4 class="card__title">РЕВО утро</h4>
+                                <p class="card__description">горький, сладкий, цветочный</p>
+                                <div>
+                                    <button class="card__button" aria-label="Купить РЕВО утро">Купить сейчас</button>
+                                    <button class="card__button" aria-label="Детали РЕВО утро">Детали</button>
+                                </div>
                             </div>
-                        </div>
+                        </article>
                     </li>
                     <li class="coffee__item">
-                        <img class="coffee__image" src="assets/image (1).png">
-                        <div class="coffee__text-container">
-                            <p class="card__price">139.000&nbsp;$</p>
-                            <p class="card__title">РЕВО Происхождение</p>
-                            <p class="card__description">сладкий, менее горький, кислый клубничный вкус</p>
-                            <div>
-                                <button class="card__button">Купить сейчас</button>
-                                <button class="card__button">Детали</button>
+                        <article>
+                            <img class="coffee__image" src="assets/image (1).png" alt="РЕВО Происхождение">
+                            <div class="coffee__text-container">
+                                <p class="card__price">139.000&nbsp;₽</p>
+                                <h4 class="card__title">РЕВО Происхождение</h4>
+                                <p class="card__description">сладкий, менее горький, кислый клубничный вкус</p>
+                                <div>
+                                    <button class="card__button" aria-label="Купить РЕВО Происхождение">Купить
+                                        сейчас</button>
+                                    <button class="card__button" aria-label="Детали РЕВО Происхождение">Детали</button>
+                                </div>
                             </div>
-                        </div>
+                        </article>
                     </li>
                     <li class="coffee__item">
-                        <img class="coffee__image" src="assets/IMAGE (2).png">
-                        <div class="coffee__text-container">
-                            <p class="card__price">85.000&nbsp;$</p>
-                            <p class="card__title">РЕВО Каждый день</p>
-                            <p class="card__description">Сбалансированный, горький, шоколадный</p>
-                            <div>
-                                <button class="card__button">Купить сейчас</button>
-                                <button class="card__button">Детали</button>
+                        <article>
+                            <img class="coffee__image" src="assets/IMAGE (2).png" alt="РЕВО Каждый день">
+                            <div class="coffee__text-container">
+                                <p class="card__price">85.000&nbsp;₽</p>
+                                <h4 class="card__title">РЕВО Каждый день</h4>
+                                <p class="card__description">Сбалансированный, горький, шоколадный</p>
+                                <div>
+                                    <button class="card__button" aria-label="Купить РЕВО Каждый день">Купить
+                                        сейчас</button>
+                                    <button class="card__button" aria-label="Детали РЕВО Каждый день">Детали</button>
+                                </div>
                             </div>
-                        </div>
+                        </article>
                     </li>
                     <li class="coffee__item">
-                        <img class="coffee__image" src="assets/IMAGE (3).png">
-                        <div class="coffee__text-container">
-                            <p class="card__price">75.000&nbsp;$</p>
-                            <p class="card__title">РЕВО Смелый да</p>
-                            <p class="card__description">богатый, горький, традиционный</p>
-                            <div>
-                                <button class="card__button">Купить сейчас</button>
-                                <button class="card__button">Детали</button>
+                        <article>
+                            <img class="coffee__image" src="assets/IMAGE (3).png" alt="РЕВО Смелый да">
+                            <div class="coffee__text-container">
+                                <p class="card__price">75.000&nbsp;₽</p>
+                                <h4 class="card__title">РЕВО Смелый да</h4>
+                                <p class="card__description">богатый, горький, традиционный</p>
+                                <div>
+                                    <button class="card__button" aria-label="Купить РЕВО Смелый да">Купить
+                                        сейчас</button>
+                                    <button class="card__button" aria-label="Детали РЕВО Смелый да">Детали</button>
+                                </div>
                             </div>
-                        </div>
+                        </article>
                     </li>
                 </ul>
             </div>
         </section>
+
         <section class="section" id="section-gifts">
             <div class="giftset__title">
                 <h3>Лучший подарок для лучшего друга</h3>
@@ -149,55 +171,54 @@
             </div>
             <div class="container">
                 <div class="giftset">
-                    <div class="giftset__card">
-                        <img class="giftset__image" src="assets/pr-0018-r.png">
+                    <article class="giftset__card">
+                        <img class="giftset__image" src="assets/pr-0018-r.png" alt="Вьетнамский фильтрованный кофе">
                         <div class="giftset__content">
                             <div>
-                                <p class="giftset__price">285.000&nbsp;$</p>
-                                <p class="giftset__name">Набор подарков &laquo;Вьетнамский фильтрованный кофе&raquo;</p>
+                                <p class="giftset__price">285.000&nbsp;₽</p>
+                                <h4 class="giftset__name">Набор подарков «Вьетнамский фильтрованный кофе»</h4>
                                 <p class="giftset__desc">Отличный подарок ценителям кофе. Кофейные зерна тщательно
-                                    отбираются и&nbsp;обжариваются компанией Revo технологии и&nbsp;секреты, полученные
-                                    от&nbsp;известных ремесленников, а&nbsp;также любовь и&nbsp;страсть рабочих
-                                    кофе&hellip; создайте чашки чистого кофе специально для вас.</p>
+                                    отбираются и обжариваются компанией Revo технологии и секреты, полученные от
+                                    известных ремесленников, а также любовь и страсть рабочих кофе… создайте чашки
+                                    чистого кофе специально для вас.</p>
                                 <ul class="giftset__meta">
                                     <li>
-                                        <img class="giftset__icon" src="assets/IC_coffee.png">
+                                        <img class="giftset__icon" src="assets/IC_coffee.png" alt="Тип семян">
                                         <div>
                                             <p class="giftset__meta-title">Тип семян</p>
                                             <p class="giftset__meta-value">Тонкая смесь робусты</p>
                                         </div>
                                     </li>
                                     <li>
-                                        <img class="giftset__icon" src="assets/IC_Mountain.png">
+                                        <img class="giftset__icon" src="assets/IC_Mountain.png" alt="Возвышение">
                                         <div>
                                             <p class="giftset__meta-title">Возвышение</p>
-                                            <p class="giftset__meta-value">
-                                                <nobr>700-800</nobr>&nbsp;м
-                                            </p>
+                                            <p class="giftset__meta-value">700-800&nbsp;м</p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="giftset__buttons">
-                                <button class="giftset__buy">Купить сейчас</button>
-                                <button class="giftset__buy">Детали</button>
+                                <button class="giftset__buy" aria-label="Купить набор">Купить сейчас</button>
+                                <button class="giftset__buy" aria-label="Подробнее о наборе">Детали</button>
                             </div>
                         </div>
-                        <ul class="giftset__steps">
+                        <ul class="giftset__steps" aria-label="Шаги оформления">
                             <li class="active">
-                                <button class="giftset__buy"> 1 </button>
+                                <button class="giftset__buy" aria-label="Шаг 1" aria-current="step">1</button>
                             </li>
                             <li>
-                                <button class="giftset__buy"> 2 </button>
+                                <button class="giftset__buy" aria-label="Шаг 2">2</button>
                             </li>
                             <li>
-                                <button class="giftset__buy"> 3 </button>
+                                <button class="giftset__buy" aria-label="Шаг 3">3</button>
                             </li>
                         </ul>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
+
         <section class="section" id="section-combo">
             <div class="combo__title">
                 <h3>Твой персональный кофе</h3>
@@ -206,60 +227,72 @@
             <div class="container">
                 <ul class="combo">
                     <li class="combo__item">
-                        <img class="combo__image" src="assets/image (6).png">
-                        <div class="combo__text-container">
-                            <div class="combo__card__price">
-                                <p>147.000&nbsp;$</p>
-                                <p class="combo__card__sale"><s>155.000&nbsp;$</s></p>
+                        <article>
+                            <img class="combo__image" src="assets/image (6).png" alt="Тёмное РЕВО комбо">
+                            <div class="combo__text-container">
+                                <div class="combo__card__price">
+                                    <p>147.000&nbsp;₽</p>
+                                    <p class="combo__card__sale"><s>155.000&nbsp;₽</s></p>
+                                </div>
+                                <h4 class="combo__card__title">Тёмное РЕВО комбо</h4>
+                                <p class="combo__card__description">Содержание кофеина в Revo Dam Da достаточно сильное,
+                                    чтобы не дать вам уснуть на работе...</p>
                             </div>
-                            <p class="combo__card__title">Тёмное РЕВО комбо</p>
-                            <p class="combo__card__description">Содержание кофеина в Revo Dam Da достаточно сильное,
-                                чтобы не дать вам уснуть на
-                                работе...</p>
-                        </div>
-                        <div class="combo__card__buttons">
-                            <button class="combo__card__button">Купить сейчас</button>
-                            <button class="combo__card__button">Детали</button>
-                        </div>
+                            <div class="combo__card__buttons">
+                                <button class="combo__card__button" aria-label="Купить Тёмное РЕВО комбо">Купить
+                                    сейчас</button>
+                                <button class="combo__card__button"
+                                    aria-label="Детали Тёмное РЕВО комбо">Детали</button>
+                            </div>
+                        </article>
                     </li>
                     <li class="combo__item">
-                        <img class="combo__image" src="assets/image (7).png">
-                        <div class="combo__text-container">
-                            <div class="combo__card__price">
-                                <p>156.000&nbsp;$</p>
-                                <p class="combo__card__sale"><s>165.000&nbsp;$</s></p>
+                        <article>
+                            <img class="combo__image" src="assets/image (7).png" alt="РЕВО Каждый день комбо">
+                            <div class="combo__text-container">
+                                <div class="combo__card__price">
+                                    <p>156.000&nbsp;₽</p>
+                                    <p class="combo__card__sale"><s>165.000&nbsp;₽</s></p>
+                                </div>
+                                <h4 class="combo__card__title">РЕВО Каждый день комбо</h4>
+                                <p class="combo__card__description">Revo Everyday это смесь горечи и аромата семян
+                                    арабики...</p>
                             </div>
-                            <p class="combo__card__title">РЕВО Каждый день комбо</p>
-                            <p class="combo__card__description">Revo Everyday это смесь горечи и аромата семян
-                                арабики...</p>
-                        </div>
-                        <div class="combo__card__buttons">
-                            <button class="combo__card__button">Купить сейчас</button>
-                            <button class="combo__card__button">Детали</button>
-                        </div>
+                            <div class="combo__card__buttons">
+                                <button class="combo__card__button" aria-label="Купить РЕВО Каждый день комбо">Купить
+                                    сейчас</button>
+                                <button class="combo__card__button"
+                                    aria-label="Детали РЕВО Каждый день комбо">Детали</button>
+                            </div>
+                        </article>
                     </li>
                     <li class="combo__item">
-                        <img class="combo__image" src="assets/image (8).png">
-                        <div class="combo__text-container">
-                            <div class="combo__card__price">
-                                <p>147.000&nbsp;$</p>
-                                <p class="combo__card__sale"><s>155.000&nbsp;$</s></p>
+                        <article>
+                            <img class="combo__image" src="assets/image (8).png" alt="Рево медовый комбо">
+                            <div class="combo__text-container">
+                                <div class="combo__card__price">
+                                    <p>147.000&nbsp;₽</p>
+                                    <p class="combo__card__sale"><s>155.000&nbsp;₽</s></p>
+                                </div>
+                                <h4 class="combo__card__title">Рево медовый комбо</h4>
+                                <p class="combo__card__description">Мёд — в наименовании Revo Honey проходит от метода
+                                    обработки зёрн арабики</p>
                             </div>
-                            <p class="combo__card__title">Рево медовый комбо</p>
-                            <p class="combo__card__description">Мёд&nbsp;&mdash; в&nbsp;наименовании Revo Honey
-                                проиходит от&nbsp;метода обработки зёрн арабики</p>
-                        </div>
-                        <div class="combo__card__buttons">
-                            <button class="combo__card__button">Купить сейчас</button>
-                            <button class="combo__card__button">Детали</button>
-                        </div>
+                            <div class="combo__card__buttons">
+                                <button class="combo__card__button" aria-label="Купить Рево медовый комбо">Купить
+                                    сейчас</button>
+                                <button class="combo__card__button"
+                                    aria-label="Детали Рево медовый комбо">Детали</button>
+                            </div>
+                        </article>
                     </li>
                 </ul>
             </div>
         </section>
     </main>
-    <footer>
-        <p class="footer">&copy; Revo Coffee Vietnam&nbsp;&mdash; 2025</p>
+
+    <footer id="footer" class="footer">
+        <p>&copy; Revo Coffee Vietnam — 2025</p>
     </footer>
 </body>
 

@@ -1,4 +1,4 @@
-/* GRID для списка */
+/* GRID для списка - равномерная сетка 2 колонки */
 .coffee {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -6,6 +6,9 @@
   padding: 20px;
   list-style: none;
   margin: 72px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .coffee__title {
@@ -18,47 +21,58 @@
   margin-bottom: 60px;
 }
 
-/* карточка горизонтальная */
+/* карточка вертикальная */
 .coffee__item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 250px 1fr;
   align-items: center;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  padding: 0;
+  gap: 40px;
 }
 
-/* картинка слева */
+/* контейнер для картинки с фоном */
+.coffee__item>article {
+  display: contents;
+}
+
+/* картинка с фоном */
 .coffee__image {
-  flex: 0 0 210px;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  object-fit: contain;
   display: block;
+  background: #f0f2f7;
+  border-radius: 12px;
+  padding: 30px;
 }
 
 /* текст справа */
 .coffee__text-container {
-  flex: 1;
-  padding: 28px 32px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  text-align: center;
+  text-align: left;
+  justify-content: center;
 }
 
 /* цена */
 .card__price {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 800;
   color: #c7a17a;
-  margin: 0;
+  margin: 0 0 8px 0;
 }
 
 /* название */
 .card__title {
-  font-size: 22px;
-  font-weight: 200;
-  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
   color: #000;
 }
 
@@ -66,15 +80,15 @@
 .card__description {
   color: #666;
   font-size: 14px;
-  line-height: 1.5;
-  margin: 0 0 12px;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
 }
 
-/* buttons wrapper */
-.card__buttons {
+/* buttons wrapper - использует Flexbox */
+.coffee__text-container>div {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 15px;
 }
 
 /* кнопка «Купить» */
@@ -82,28 +96,174 @@
   background: #c7a17a;
   color: #fff;
   font-weight: 700;
-  padding: 10px 22px;
-  border-radius: 22px;
+  padding: 12px 28px;
+  border-radius: 25px;
   font-size: 14px;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .card__button:hover {
-  background: #f9f5e8;
-  color: #415167;
+  background: #b08968;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(199, 161, 122, 0.3);
 }
 
-/* кнопка «Подробнее» */
-.card__details {
-  color: #415167;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
+.card__button:active {
+  transform: translateY(0);
 }
 
-.card__details:hover {
-  text-decoration: underline;
+/* DESKTOP FIRST МЕДИАЗАПРОСЫ */
+
+/* Большие экраны (до 1200px) */
+@media (max-width: 1200px) {
+  .coffee {
+    gap: 28px;
+    padding: 15px;
+  }
+
+  .coffee__item {
+    grid-template-columns: 220px 1fr;
+    gap: 30px;
+  }
+
+  .coffee__image {
+    max-width: 220px;
+    padding: 25px;
+  }
+}
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+  .coffee {
+    gap: 24px;
+    margin: 50px auto;
+  }
+
+  .coffee__title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .coffee__item {
+    grid-template-columns: 200px 1fr;
+    gap: 25px;
+  }
+
+  .coffee__image {
+    max-width: 200px;
+    padding: 20px;
+  }
+
+  .card__price {
+    font-size: 24px;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card__button {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
+}
+
+/* Планшеты малые (до 768px) */
+@media (max-width: 768px) {
+  .coffee {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 40px auto;
+    padding: 10px;
+  }
+
+  .coffee__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .coffee__item {
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+  }
+
+  .coffee__image {
+    max-width: 180px;
+    padding: 20px;
+  }
+
+  .card__price {
+    font-size: 22px;
+  }
+
+  .card__title {
+    font-size: 18px;
+  }
+
+  .card__description {
+    font-size: 13px;
+  }
+
+  .card__button {
+    padding: 9px 18px;
+    font-size: 12px;
+  }
+
+  .coffee__text-container>div {
+    gap: 10px;
+  }
+}
+
+/* Мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+  .coffee {
+    gap: 30px;
+    margin: 30px auto;
+    padding: 5px;
+  }
+
+  .coffee__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .coffee__item {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+  }
+
+  .coffee__image {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 25px;
+  }
+
+  .coffee__text-container {
+    text-align: center;
+  }
+
+  .card__price {
+    font-size: 20px;
+  }
+
+  .card__title {
+    font-size: 18px;
+  }
+
+  .card__button {
+    flex: 1;
+    padding: 10px 16px;
+  }
+
+  .coffee__text-container>div {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
 }

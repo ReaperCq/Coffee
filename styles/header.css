@@ -18,7 +18,7 @@
 }
 
 .header__logo {
-    width: 160px;
+    width: 140px;
 }
 
 .header__title {
@@ -96,4 +96,113 @@
 .header__nav a:hover {
     opacity: 1;
     transform: translateX(6px);
+}
+
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        grid-template-columns: 35% 65%;
+    }
+
+    .header__left {
+        padding: 40px 30px;
+        padding-left: 50px;
+    }
+
+    .header__title {
+        font-size: 56px;
+        margin-right: -80px;
+    }
+
+    .header__logo {
+        width: 120px;
+    }
+
+    .header__nav {
+        padding: 80px 40px;
+    }
+
+    .header__nav ul {
+        gap: 25px;
+    }
+}
+
+/* Планшеты малые (до 768px) */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .header__left {
+        padding: 30px 20px;
+        padding-left: 20px;
+        min-height: auto;
+    }
+
+    .header__title {
+        font-size: 48px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .header__logo {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    .header__right {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px auto;
+    }
+
+    .header__image {
+        height: 300px;
+    }
+
+    .header__nav {
+        padding: 40px 20px;
+    }
+
+    .header__nav h2 {
+        font-size: 14px;
+    }
+
+    .header__nav ul {
+        gap: 20px;
+    }
+
+    .header__nav a {
+        font-size: 14px;
+    }
+}
+
+/* Мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+    .header__title {
+        font-size: 36px;
+    }
+
+    .header__logo {
+        width: 80px;
+    }
+
+    .header__right {
+        grid-template-rows: 250px auto;
+    }
+
+    .header__image {
+        height: 250px;
+    }
+
+    .header__nav {
+        padding: 30px 20px;
+    }
+
+    .header__nav ul {
+        gap: 15px;
+    }
 }

@@ -1,4 +1,3 @@
-/* GRID для списка - автоматическое размещение с минимальной шириной */
 .combo {
     list-style: none;
     display: grid;
@@ -21,7 +20,6 @@
     margin-bottom: 60px;
 }
 
-/* карточка вертикальная - использует grid для точного выравнивания */
 .combo__item {
     display: grid;
     grid-template-rows: 280px auto minmax(80px, auto) auto;
@@ -53,7 +51,6 @@
     margin-bottom: 1em;
 }
 
-/* текст */
 .combo__text-container {
     display: grid;
     grid-template-rows: auto auto 1fr;
@@ -61,7 +58,6 @@
     gap: 8px;
 }
 
-/* цена */
 .combo__card__price {
     display: flex;
     font-size: 24px;
@@ -79,7 +75,6 @@
     font-weight: 400;
 }
 
-/* название */
 .combo__card__title {
     font-size: 24px;
     font-weight: 900;
@@ -91,7 +86,6 @@
     align-items: center;
 }
 
-/* описание */
 .combo__card__description {
     color: #666;
     font-size: 14px;
@@ -100,7 +94,6 @@
     align-self: start;
 }
 
-/* buttons wrapper - использует Flexbox */
 .combo__card__buttons {
     display: flex;
     gap: 12px;
@@ -108,7 +101,6 @@
     align-self: end;
 }
 
-/* кнопка «Купить» */
 .combo__card__button {
     background: #c7a17a;
     color: #fff;
@@ -129,8 +121,6 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(199, 161, 122, 0.3);
 }
-
-/* DESKTOP FIRST МЕДИАЗАПРОСЫ */
 
 /* Планшеты большие (до 1200px) */
 @media (max-width: 1200px) {

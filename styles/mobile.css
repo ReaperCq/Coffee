@@ -1,0 +1,340 @@
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    padding: 12px 10px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle__line {
+    width: 100%;
+    height: 3px;
+    background: #415167;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Состояние открытого меню */
+.menu-toggle.active .menu-toggle__line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Кнопка "Наверх" */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: #c7a17a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: #b08968;
+    transform: scale(1.1);
+}
+
+.scroll-top:active {
+    transform: scale(0.95);
+}
+
+/*ПЛАНШЕТЫ (до 1024px)*/
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .section {
+        padding: 60px 16px 80px;
+    }
+
+    /* Header - добавляем контейнер для логотипа и меню */
+    .header__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/*ПЛАНШЕТЫ И МОБИЛЬНЫЕ (до 768px)*/
+@media (max-width: 768px) {
+
+    body {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 40px 12px 60px;
+    }
+
+    /* Фиксация header при скролле */
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* Header - мобильная версия */
+    .header__left {
+        padding: 20px;
+        padding-left: 20px;
+    }
+
+    .header__top {
+        margin-bottom: 20px;
+    }
+
+    .menu-toggle__line {
+        background: #415167;
+    }
+
+    /* Основная навигация (боковое меню) */
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: #415167;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        padding: 80px 30px 30px;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        overflow-y: auto;
+        display: flex !important;
+    }
+
+    .header__nav.active {
+        right: 0;
+    }
+
+    .header__nav h2 {
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .header__nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header__nav ul li {
+        width: 100%;
+    }
+
+    .header__nav a {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        color: #fff;
+        opacity: 0.85;
+    }
+
+    .header__nav a:hover,
+    .header__nav a.active {
+        opacity: 1;
+        padding-left: 10px;
+        transform: none;
+    }
+
+    /* Затемнение фона при открытом меню */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
+
+    /* Кнопка "Наверх" для планшетов/мобильных */
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
+    }
+
+    /* Увеличиваем минимальные размеры для touch */
+    button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .card__button,
+    .combo__card__button,
+    .giftset__buy {
+        min-width: 120px;
+        padding: 12px 20px;
+    }
+}
+
+/* МОБИЛЬНЫЕ УСТРОЙСТВА (до 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 30px 8px 40px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Header - мобильная версия */
+    .header__left {
+        padding: 15px;
+    }
+
+    .header__logo {
+        width: 100px;
+    }
+
+    .header__title {
+        font-size: 36px;
+    }
+
+    /* Навигация на всю ширину экрана */
+    .header__nav {
+        width: 100%;
+        padding: 60px 20px 30px;
+    }
+
+    .header__nav a {
+        font-size: 17px;
+        padding: 14px 0;
+    }
+
+    /* Кнопка "Наверх" */
+    .scroll-top {
+        width: 48px;
+        height: 48px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 12px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    /* Кнопки - больший размер для удобного нажатия */
+    .card__button,
+    .combo__card__button {
+        min-width: 140px;
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .giftset__buy {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* ДОПОЛНИТЕЛЬНЫЕ TOUCH-ОПТИМИЗАЦИИ */
+
+/* Убираем outline для touch-устройств, но сохраняем для клавиатуры */
+@media (hover: none) and (pointer: coarse) {
+    button:focus {
+        outline: none;
+    }
+
+    a:focus {
+        outline: none;
+    }
+
+    /* Добавляем визуальную обратную связь при нажатии */
+    button:active,
+    a:active {
+        opacity: 0.7;
+    }
+}
+
+/* Улучшенная область нажатия для ссылок */
+.header__nav a {
+    position: relative;
+}
+
+.header__nav a::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    right: -10px;
+    bottom: -5px;
+}
+
+
+a,
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+.header__nav {
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}

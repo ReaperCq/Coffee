@@ -4,16 +4,39 @@
 @import "./styles/giftset.css";
 @import "./styles/combo.css";
 
+
+:root {
+  --primary-color: #c7a17a;
+  --secondary-color: #415167;
+  --text-color: #333;
+  --background-color: #ffffff;
+  --font-family: 'Montserrat', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
+html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  /* Material Design минимум */
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 .section {
   padding: 86px 16px 126px;
@@ -25,23 +48,98 @@ body {
   width: 100%;
 }
 
+
 .title {
   text-align: center;
   font-weight: bold;
+  color: var(--secondary-color);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--secondary-color);
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+}
+
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Минимальные размеры для touch-устройств (HIG и MD) */
+button,
+a {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
 
 .footer {
   display: flex;
   place-content: center;
   padding: 20px;
-  background: #415167;
+  background: var(--secondary-color);
   color: #fff;
   font-size: 14px;
+  text-align: center;
 }
+
+
+
+/* Фокус для клавиатурной навигации */
+*:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Скрытие элементов только визуально (для screen readers) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 
 
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
   .section {
     padding: 60px 16px 80px;
   }
@@ -54,6 +152,10 @@ body {
 
 /* Планшеты малые (до 768px) */
 @media (max-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+
   .section {
     padding: 40px 12px 60px;
   }
@@ -70,6 +172,11 @@ body {
 
 /* Мобильные устройства (до 480px) */
 @media (max-width: 480px) {
+  body {
+    font-size: 17px;
+    /* iOS HIG */
+  }
+
   .section {
     padding: 30px 8px 40px;
   }
@@ -82,5 +189,38 @@ body {
     padding: 12px;
     font-size: 11px;
     text-align: center;
+  }
+}
+
+
+
+/* Предотвращение выделения текста на touch-устройствах */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Плавные переходы */
+.smooth-transition {
+  transition: var(--transition);
+}
+
+
+@media print {
+
+  .menu-toggle,
+  .scroll-top,
+  .nav-overlay {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+  }
+
+  .section {
+    padding: 20px 0;
   }
 }

@@ -8,12 +8,24 @@
     <title>Кофе - Revo Coffee Vietnam</title>
     <link rel="icon" href="assets/IC_coffee.png" type="image/x-icon">
     <link rel="stylesheet" href="./index.css">
+    <!-- Мобильные стили -->
+    <link rel="stylesheet" href="./styles/mobile.css" media="screen and (max-width: 1024px)">
 </head>
 
 <body>
     <header class="header">
         <div class="header__left">
-            <img class="header__logo" src="assets/LOGO.png" alt="Логотип Revo Coffee">
+            <div class="header__top">
+                <img class="header__logo" src="assets/LOGO.png" alt="Логотип Revo Coffee">
+
+                <!-- Гамбургер-кнопка (видна на планшетах и мобильных) -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+            </div>
+
             <h1 class="header__title">
                 Твой<br>
                 <span class="header__title--background">персональный</span><br>
@@ -22,23 +34,25 @@
         </div>
         <div class="header__right">
             <img class="header__image" src="assets/Баннер.png" alt="Кофейные зёрна Revo">
-            <nav class="header__nav" aria-label="Основная навигация">
+
+            <!-- Основная навигация -->
+            <nav class="header__nav" id="mainNav" aria-label="Основная навигация">
                 <h2>Главная</h2>
                 <ul>
                     <li>
-                        <a href="#section-features">Кофе</a>
+                        <a href="#section-features" class="nav__link active">Кофе</a>
                     </li>
                     <li>
-                        <a href="#section-coffee">Фильтр кофе</a>
+                        <a href="#section-coffee" class="nav__link">Фильтр кофе</a>
                     </li>
                     <li>
-                        <a href="#section-combo">Комбо</a>
+                        <a href="#section-combo" class="nav__link">Комбо</a>
                     </li>
                     <li>
-                        <a href="#section-gifts">Подарочные наборы</a>
+                        <a href="#section-gifts" class="nav__link">Подарочные наборы</a>
                     </li>
                     <li>
-                        <a href="#footer">Контакты</a>
+                        <a href="#footer" class="nav__link">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -294,6 +308,14 @@
     <footer id="footer" class="footer">
         <p>&copy; Revo Coffee Vietnam — 2025</p>
     </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        ↑
+    </button>
+
+    <!-- Подключение JavaScript -->
+    <script src="scripts/menu.js"></script>
 </body>
 
 </html>

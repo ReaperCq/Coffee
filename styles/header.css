@@ -132,9 +132,9 @@
 @media (max-width: 768px) {
     .header {
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
+        grid-template-rows: auto auto;
         height: auto;
-        min-height: 100vh;
+        min-height: auto;
     }
 
     .header__left {
@@ -156,15 +156,20 @@
 
     .header__right {
         grid-template-columns: 1fr;
-        grid-template-rows: 300px auto;
+        grid-template-rows: auto;
+        background: transparent; /* Убираем синий фон под картинкой */
+        min-height: auto;
     }
 
     .header__image {
         height: 300px;
+        width: 100%;
+        display: block;
     }
 
     .header__nav {
-        padding: 40px 20px;
+        padding: 0; /* Убираем padding */
+        /* Навигация будет управляться через mobile.css (боковое меню) */
     }
 
     .header__nav h2 {
@@ -191,7 +196,7 @@
     }
 
     .header__right {
-        grid-template-rows: 250px auto;
+        grid-template-rows: auto;
     }
 
     .header__image {
@@ -199,7 +204,7 @@
     }
 
     .header__nav {
-        padding: 30px 20px;
+        padding: 0;
     }
 
     .header__nav ul {
